@@ -1,0 +1,1216 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+    
+    
+      
+        <title>#parsing - PLComp</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#22102020-peter-sovietov" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+  
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="./index.html" title="PLComp" class="md-header-nav__button md-logo" aria-label="PLComp">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            PLComp
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              #parsing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./index.html" title="PLComp" class="md-nav__button md-logo" aria-label="PLComp">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    PLComp
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        New
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="all.html" class="md-nav__link">
+        All
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analysis.html" class="md-nav__link">
+        #analysis
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="registerallocation.html" class="md-nav__link">
+        #registerallocation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="history.html" class="md-nav__link">
+        #history
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="smt.html" class="md-nav__link">
+        #smt
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+      <a href="parsing.html" class="md-nav__link md-nav__link--active">
+        #parsing
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="conf.html" class="md-nav__link">
+        #conf
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="synthesis.html" class="md-nav__link">
+        #synthesis
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jit.html" class="md-nav__link">
+        #jit
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="semantics.html" class="md-nav__link">
+        #semantics
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dsl.html" class="md-nav__link">
+        #dsl
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ssa.html" class="md-nav__link">
+        #ssa
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ml.html" class="md-nav__link">
+        #ml
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="optimization.html" class="md-nav__link">
+        #optimization
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lisp.html" class="md-nav__link">
+        #lisp
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stratego.html" class="md-nav__link">
+        #stratego
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="linearscan.html" class="md-nav__link">
+        #linearscan
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bpf.html" class="md-nav__link">
+        #bpf
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua.html" class="md-nav__link">
+        #lua
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="datalog.html" class="md-nav__link">
+        #datalog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ocaml.html" class="md-nav__link">
+        #ocaml
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gc.html" class="md-nav__link">
+        #gc
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fp.html" class="md-nav__link">
+        #fp
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="trace.html" class="md-nav__link">
+        #trace
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="graalvm.html" class="md-nav__link">
+        #graalvm
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jvm.html" class="md-nav__link">
+        #jvm
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bliss.html" class="md-nav__link">
+        #bliss
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lcc.html" class="md-nav__link">
+        #lcc
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fortran.html" class="md-nav__link">
+        #fortran
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ghc.html" class="md-nav__link">
+        #ghc
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="grin.html" class="md-nav__link">
+        #grin
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="survey.html" class="md-nav__link">
+        #survey
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ag.html" class="md-nav__link">
+        #ag
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="spoofax.html" class="md-nav__link">
+        #spoofax
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gradual.html" class="md-nav__link">
+        #gradual
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types.html" class="md-nav__link">
+        #types
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dex.html" class="md-nav__link">
+        #dex
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="art.html" class="md-nav__link">
+        #art
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="android.html" class="md-nav__link">
+        #android
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="isa.html" class="md-nav__link">
+        #isa
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vm.html" class="md-nav__link">
+        #vm
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="verification.html" class="md-nav__link">
+        #verification
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="transpilation.html" class="md-nav__link">
+        #transpilation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solver.html" class="md-nav__link">
+        #solver
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vliw.html" class="md-nav__link">
+        #vliw
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="superoptimizer.html" class="md-nav__link">
+        #superoptimizer
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="autotuning.html" class="md-nav__link">
+        #autotuning
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="editor.html" class="md-nav__link">
+        #editor
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="indentation.html" class="md-nav__link">
+        #indentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="emacs.html" class="md-nav__link">
+        #emacs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="smie.html" class="md-nav__link">
+        #smie
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="langworkbench.html" class="md-nav__link">
+        #langworkbench
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="llvm.html" class="md-nav__link">
+        #llvm
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cps.html" class="md-nav__link">
+        #cps
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pe.html" class="md-nav__link">
+        #pe
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="metacompiler.html" class="md-nav__link">
+        #metacompiler
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="interpreter.html" class="md-nav__link">
+        #interpreter
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="multicore.html" class="md-nav__link">
+        #multicore
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="synth.html" class="md-nav__link">
+        #synth
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="codegen.html" class="md-nav__link">
+        #codegen
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="22102020-peter-sovietov"><span style="font-weight:normal;font-style:italic;font-size:medium">22/10/2020, Peter Sovietov</span><a class="headerlink" href="#22102020-peter-sovietov" title="Permanent link">&para;</a></h1>
+<p>Очередной выпад в сторону классического подхода к преподаванию синтаксического разбора. Простое и изящное в части содержания пособие по написанию разбора арифметических выражений. Автор красиво и плавно приводит к идее использования рекурсивного спуска совместно с парсером Пратта.</p>
+<p><strong>Just write the #!%/* parser</strong>
+<a href="https://tiarkrompf.github.io/notes/?/just-write-the-parser/">https://tiarkrompf.github.io/notes/?/just-write-the-parser</a>/</p>
+<p>На первый взгляд эта новость не слишком подходит для PLComp, но обращает на себя внимание личность автора (Tiark Rompf — один из лучших специалистов в области DSL-компиляции) и идеологическая спорность его подхода.</p>
+<p>Действительно ли это правильный путь — перейти в обучении сразу к нюансам низкоуровневого кодирования, оставив за бортом вопросы формальной спецификации языка, его синтаксиса? Известные примеры реальных проектов, безусловно, говорят, мол, да, так оно и происходит на практике. И даже если есть спецификация, то она остается «на бумаге» и со временем расходится с реализацией все больше и больше.</p>
+<p><a href="parsing.html">#parsing</a></p>
+<hr />
+<h1 id="10062020-peter-sovietov"><span style="font-weight:normal;font-style:italic;font-size:medium">10/06/2020, Peter Sovietov</span><a class="headerlink" href="#10062020-peter-sovietov" title="Permanent link">&para;</a></h1>
+<p>Автоматическое извлечение КС-грамматики на основе динамического анализа управляющего графа программы на примерах входных данных. Любопытно, что авторы не стали даже упоминать грамматическое сжатие.</p>
+<p><strong>Mining Input Grammars from Dynamic Control Flow </strong>
+<a href="https://publications.cispa.saarland/3101/1/fse2020-mimid.pdf">https://publications.cispa.saarland/3101/1/fse2020-mimid.pdf</a></p>
+<p><a href="analysis.html">#analysis</a> <a href="parsing.html">#parsing</a></p>
+<hr />
+<h1 id="28052020-vladimir-kazanov"><span style="font-weight:normal;font-style:italic;font-size:medium">28/05/2020, Vladimir Kazanov</span><a class="headerlink" href="#28052020-vladimir-kazanov" title="Permanent link">&para;</a></h1>
+<p>Синтаксический анализ программ считается давно изученной и почти даже скучной областью. Но при применении теории к практике текстовых редакторов часто выясняется, что привычные формализмы работают плохо и разработчикам приходится предлагать неординарные решения. В своей статье &ldquo;<strong>SMIE: Simple Minded Indentation Engine</strong>&rdquo; Стефан Монье излагает суть проблемы автоматического расставления отступов и описывает решение на базе  грамматик с операторным предшествованием (operator-precedence grammars), используемое в Емаксе.</p>
+<p><a href="http://www-labs.iro.umontreal.ca/~monnier/smie.pdf">http://www-labs.iro.umontreal.ca/~monnier/smie.pdf</a></p>
+<p><a href="parsing.html">#parsing</a> <a href="editor.html">#editor</a> <a href="indentation.html">#indentation</a> <a href="emacs.html">#emacs</a> <a href="smie.html">#smie</a></p>
+<hr />
+<h1 id="15052020"><span style="font-weight:normal;font-style:italic;font-size:medium">15/05/2020</span><a class="headerlink" href="#15052020" title="Permanent link">&para;</a></h1>
+<p>Необычный подход к построению PEG-подобного парсера на основе восходящего разбора.
+<strong>Pika parsing: parsing in reverse solves the left recursion and error recovery problems </strong>
+<a href="https://arxiv.org/pdf/2005.06444.pdf">https://arxiv.org/pdf/2005.06444.pdf</a></p>
+<p><a href="parsing.html">#parsing</a></p>
+<hr />
+<h1 id="14052020"><span style="font-weight:normal;font-style:italic;font-size:medium">14/05/2020</span><a class="headerlink" href="#14052020" title="Permanent link">&para;</a></h1>
+<p>Две недавние статьи с участием Alessandro Warth. A. Warth — разработчик системы oMeta и автор известной работы по адаптации Packrat-парсеров для поддержки левосторонней рекурсии.</p>
+<p><strong>Incremental Packrat Parsing</strong> (оригинальная идея по использованию Pakrat-таблицы для реализации инкрементального разбора)
+<a href="https://dl.acm.org/doi/pdf/10.1145/3136014.3136022">https://dl.acm.org/doi/pdf/10.1145/3136014.3136022</a></p>
+<p><strong>Recognising and Generating Terms using Derivatives of Parsing Expression Grammars </strong>
+Использование производных Бржозовского в PEG-парсере для порождения предложений описываемого языка. Может использоваться в задаче тестирования компилятора (fuzzing). Но особенно интересно расширить эту идею на PEG с иерархическими структурами данных &ndash; и порождать тестовые примеры для них.
+<a href="https://arxiv.org/pdf/1801.10490.pdf">https://arxiv.org/pdf/1801.10490.pdf</a></p>
+<p><a href="parsing.html">#parsing</a></p>
+<hr />
+<h1 id="12052020"><span style="font-weight:normal;font-style:italic;font-size:medium">12/05/2020</span><a class="headerlink" href="#12052020" title="Permanent link">&para;</a></h1>
+<p>О вычислительной универсальности PEG-парсеров.
+<strong>The computational power of Parsing Expression Grammars </strong>
+<a href="https://arxiv.org/pdf/1902.08272.pdf">https://arxiv.org/pdf/1902.08272.pdf</a></p>
+<p><a href="parsing.html">#parsing</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="smt.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                #smt
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="conf.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                #conf
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.53cc9318.min.js"></script>
+      <script src="assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: [],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

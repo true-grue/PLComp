@@ -14,7 +14,7 @@
     
     
       
-        <title>#types - PLComp</title>
+        <title>#scheme - PLComp</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#01122020-alexander-tchitchigin" class="md-skip">
+        <a href="#07022021-vladimir-kazanov" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              #types
+              #scheme
             
           </span>
         </div>
@@ -581,11 +581,20 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="scheme.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+      <a href="scheme.html" class="md-nav__link md-nav__link--active">
         #scheme
       </a>
+      
     </li>
   
 
@@ -776,20 +785,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-      <a href="types.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="types.html" class="md-nav__link">
         #types
       </a>
-      
     </li>
   
 
@@ -1183,15 +1183,21 @@
               
                 
                 
-                <h1 id="01122020-alexander-tchitchigin"><span style="font-weight:normal;font-style:italic;font-size:medium">01/12/2020, Alexander Tchitchigin</span><a class="headerlink" href="#01122020-alexander-tchitchigin" title="Permanent link">&para;</a></h1>
-<p><a href="https://www.jeffsmits.net/assets/articles/sle20-paper4.pdf">https://www.jeffsmits.net/assets/articles/sle20-paper4.pdf</a>
-Gradually Typing Strategies</p>
-<p>Статья рассказывает о применении популярной техники постепенной типизации (Gradual Typing) в необычной области &ndash; к языку переписывания термов Stratego (который используется для &ldquo;program normalization, type checkers, program analyses, code generators, and more&rdquo;). Несмотря на отсутствие проверки типов в Stratego до сего момента, он тем не менее послужил для вдохновения авторов Haskell фреймворка SYB.</p>
-<p>Использование Gradual Typing (постепенной типизации) мотивировано двумя факторами. Первый &ndash; обратная совместимость, так как Stratego (в составе фреймворков Stratego/XT и Spoofax) используется в production-системах, разрабатываемых как в академии (<a href="researchr.org">researchr.org</a>, <a href="conf.researchr.org">conf.researchr.org</a>, платформа онлайн-курсов TU Delft), так и в индустрии (где-то в недрах Oracle Labs). Второй &ndash; высокая &ldquo;динамичность&rdquo; переписывания термов, которая в некоторых случаях используется (а кто-то скажет &ldquo;эксплуатируется&rdquo;) для (временного) порождения нетипизируемых термов и превращения их обратно в типизируемые.</p>
-<p>Дополнительно задача осложняется наличием в Stratego правил переписывания &ldquo;высшего порядка&rdquo; (называемых &ldquo;стратегиями переписывания&rdquo;), принимающих и применяющих другие правила переписывания (или стратегии). Отсюда возникает понятие Type-Preserving стратегий, реализующее ограниченную форму Higher-Kinded Types.</p>
-<p>Кроме того, авторы применяют механизм &ldquo;прозрачных&rdquo; во время исполнения прокси-типов для того чтобы избежать накапливания лишних динамических преобразований типов при передаче правил переписывания из статически-типизированных стратегий в динамически-типизированные и обратно.</p>
-<p>Проверка полученной системы типов на существующем проекте (учебный ассемблер для Java-байткода) продемонстрировала два достаточно ожидаемых результата: а) корректный динамический код написан так как если бы был статически типизирован, поэтому его легко аннотировать явными типами и почти не приходится при этом рефакторить; б) плохо протестированный динамический код содержит ошибки, которые легко обнаруживаются тайп-чекером (например, возврат списка вместо элемента — классика, сам на таком попадался).</p>
-<p><a href="stratego.html">#stratego</a> <a href="spoofax.html">#spoofax</a> <a href="gradual.html">#gradual</a> <a href="types.html">#types</a></p>
+                <h1 id="07022021-vladimir-kazanov"><span style="font-weight:normal;font-style:italic;font-size:medium">07/02/2021, Vladimir Kazanov</span><a class="headerlink" href="#07022021-vladimir-kazanov" title="Permanent link">&para;</a></h1>
+<p>На Хабре несколько дней назад появилась  статья, популярно поясняющая знаменитую технику реализации языка Scheme - Cheney on the M.T.A. Статья излагает историю названия и объясняет работу остроумного подхода к сборке мусора.</p>
+<p>Исходный код Scheme здесь сначала должен быть преобразован в представление с <em>продолжениями</em> (см., например, книгу Compiling with Continuations). Функции этого представления один к одному компилируются в функции на языке C. Многочисленные временные значения, характерные для Scheme, сначала размещаются на стеке вызовов C. Во время работы программы стек вызовов функций C будет расти, так как при компиляции с продолжениями функции не возвращаются к точке исходного вызова.</p>
+<p>При превышении допустимого размера стек сбрасывается вызовом longjmp. Размер проверяется, например, через численное значение адреса временной переменной. Перед сбросом живые значения из стека перемещаются в кучу для зачистки алгоритмом Чейни, мертвые же значения отбрасываются автоматически.</p>
+<p>Техника сильно упрощает компиляцию Scheme в C (например, рекурсивные вызовы и их оптимизацию, легко выражаются продолжения), из-за чего ее используют минимум два популярных компилятора: Cyclone и Chicken.</p>
+<p>Статья на Хабре: <a href="https://habr.com/ru/company/ruvds/blog/540502/">https://habr.com/ru/company/ruvds/blog/540502/</a></p>
+<p>Подробности реализации техники от разработчика Chicken Scheme:
+<a href="https://www.more-magic.net/posts/internals-gc.html">https://www.more-magic.net/posts/internals-gc.html</a></p>
+<p>Реализация Cyclone: <a href="https://justinethier.github.io/cyclone/docs/Garbage-Collector">https://justinethier.github.io/cyclone/docs/Garbage-Collector</a></p>
+<p>Оригинальная публикация по Cheney on the MTA: <a href="http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=3A988CF024FE807165D1CFA957445BC8?doi=10.1.1.54.7143&amp;rep=rep1&amp;type=pdf">http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=3A988CF024FE807165D1CFA957445BC8?doi=10.1.1.54.7143&amp;rep=rep1&amp;type=pdf</a></p>
+<p>Алгоритм сборки мусора Чейни: <a href="https://people.cs.umass.edu/~emery/classes/cmpsci691s-fall2004/papers/p677-cheney.pdf">https://people.cs.umass.edu/~emery/classes/cmpsci691s-fall2004/papers/p677-cheney.pdf</a></p>
+<p>Компиляторы, использующий другие подходы к компиляции в язык C:</p>
+<p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.50.8424&amp;rep=rep1&amp;type=pdf">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.50.8424&amp;rep=rep1&amp;type=pdf</a> - Bigloo - компилятор Scheme и Standard ML</p>
+<p><a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.48.8788&amp;rep=rep1&amp;type=pdf">https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.48.8788&amp;rep=rep1&amp;type=pdf</a> - Gambit - компилятор Scheme</p>
+<p><a href="garbagecollection.html">#garbagecollection</a> <a href="scheme.html">#scheme</a></p>
                 
               
               
@@ -1210,7 +1216,7 @@ Gradually Typing Strategies</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="gradual.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="garbagecollection.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1219,19 +1225,19 @@ Gradually Typing Strategies</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                #gradual
+                #garbagecollection
               </div>
             </div>
           </a>
         
         
-          <a href="dex.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="trace.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                #dex
+                #trace
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

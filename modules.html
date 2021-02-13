@@ -14,7 +14,7 @@
     
     
       
-        <title>pe - PLComp</title>
+        <title>modules - PLComp</title>
       
     
     
@@ -91,7 +91,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              pe
+              modules
             
           </span>
         </div>
@@ -531,11 +531,18 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="modules.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      <a href="modules.html" class="md-nav__link md-nav__link--active">
         modules
       </a>
+      
     </li>
   
 
@@ -1056,18 +1063,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      <a href="pe.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="pe.html" class="md-nav__link">
         pe
       </a>
-      
     </li>
   
 
@@ -1160,25 +1160,15 @@
               
                 
                 
-                <h1><span style="font-weight:normal;font-style:italic;font-size:medium">21/05/2020</span></h1>
-<p>Недавно (27-28 апреля, 2020) состоялся европейский симпозиум по Лиспу.</p>
-<p><strong>European Lisp Symposium </strong>
-<a href="https://www.european-lisp-symposium.org/2020/">https://www.european-lisp-symposium.org/2020/</a>
-Видеозаписи докладов: <a href="https://www.youtube.com/playlist?list=PLA66mD-6yK8yjlJCI0Ay2f2IvvmB9Ktga">https://www.youtube.com/playlist?list=PLA66mD-6yK8yjlJCI0Ay2f2IvvmB9Ktga</a></p>
-<p>Ниже краткая информация о 3 докладах по околокомпиляторной тематике:</p>
-<p><strong>Partial Evaluation Based CPS Transformation: An Implementation Case Study </strong>
-Описание компилятора для диалекта Лиспа pLisp. В компиляторе используются частичные вычисления и CPS.
-Слайды: <a href="https://www.european-lisp-symposium.org/static/2020/jayaprakash-slides.pdf">https://www.european-lisp-symposium.org/static/2020/jayaprakash-slides.pdf</a>
-Текст доклада в сборнике: <a href="https://www.european-lisp-symposium.org/static/proceedings/2020.pdf">https://www.european-lisp-symposium.org/static/proceedings/2020.pdf</a></p>
-<p><strong>LLVM Code Generation for Open Dylan </strong>
-Dylan — это диалект Лиспа с Алгол-подобным синтаксисом. В начале 90-х этот язык развивался компанией Apple. В докладе представлено описание генератора кода для Dylan на основе LLVM.
-Слайды: <a href="https://www.european-lisp-symposium.org/static/2020/housel-slides.pdf">https://www.european-lisp-symposium.org/static/2020/housel-slides.pdf</a>
-Текст доклада в сборнике: <a href="https://www.european-lisp-symposium.org/static/proceedings/2020.pdf">https://www.european-lisp-symposium.org/static/proceedings/2020.pdf</a></p>
-<p><strong>Later Binding: Just in Time Compilation of a Younger Dynamic Programming Language </strong>
-Краткий анализ компилятора LuaJIT
-Видео выступления: <a href="https://www.youtube.com/watch?v=FBk5XAEhu2s">https://www.youtube.com/watch?v=FBk5XAEhu2s</a>
-Текст доклада в сборнике: <a href="https://www.european-lisp-symposium.org/static/proceedings/2020.pdf">https://www.european-lisp-symposium.org/static/proceedings/2020.pdf</a></p>
-<p><a href="conf.html">#conf</a> <a href="jit.html">#jit</a> <a href="llvm.html">#llvm</a> <a href="cps.html">#cps</a> <a href="pe.html">#pe</a></p>
+                <h1><span style="font-weight:normal;font-style:italic;font-size:medium">13/02/2021, Alexander Tchitchigin</span></h1>
+<p><a href="https://grosskurth.ca/bib/1997/cardelli.pdf">https://grosskurth.ca/bib/1997/cardelli.pdf</a>
+&ldquo;Program Fragments, Linking, and Modularization&rdquo; Luca Cardelli.</p>
+<p>Статья поднимает вопрос <em>корректности</em> раздельной компиляции и линковки, и потому — я считаю — обязательна к прочтению для всех авторов языков программирования! 😃</p>
+<p>Уже во введении на простейшем примере создания воображаемой программы, состоящей всего из двух модулей, разрабатываемых независимо, автор иллюстрирует, наверное, в<em>се </em>проблемы, при этом возникающие. Между делом Карделли упоминает п<em>убличные репозитории артефактов </em>(типа Maven Central или Nuget. Напомню, что статья опубликована в 1996 году!). Многие из обозначенных проблем линковки раздельно скомпилированных модулей до сих пор не решены ни в мейнстримных, ни в исследовательских языках.</p>
+<p>В качестве основного результата Карделли предлагает, вероятно, первую формальную модель раздельной компиляции и последующей линковки, позволяющую строго рассмотреть вопрос о корректности этих процессов. Корректность в этом смысле приведённой простейшей системы модулей для просто типизированного лямбда-исчисления (в качестве модельного языка) формально д<em>оказывается.</em> Автор, конечно же, указывает на необходимость расширения модели как в сторону более развитых языков (параметрический полиморфизм, ООП), так и в сторону более сложных систем модулей (параметризованные модули, &ldquo;функторы&rdquo; в духе Standard ML, первоклассные модули). Существуют ли такие работы, непосредственно продолжающие это исследование, мне не известно.</p>
+<p>Однако, в качестве related work и дальнейшего чтения могу указать на работы по формализации (и доказательству корректности) раздельной компиляции для языка C в рамках проекта CompCert.</p>
+<h4></h4>
+<p><a href="separatecompilation.html">#separatecompilation</a> <a href="linking.html">#linking</a> <a href="modules.html">#modules</a> <a href="stlc.html">#stlc</a></p>
                 
               
               
@@ -1197,7 +1187,7 @@ Dylan — это диалект Лиспа с Алгол-подобным син
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="cps.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="linking.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1206,19 +1196,19 @@ Dylan — это диалект Лиспа с Алгол-подобным син
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                cps
+                linking
               </div>
             </div>
           </a>
         
         
-          <a href="metacompiler.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="stlc.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                metacompiler
+                stlc
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

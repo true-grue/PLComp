@@ -1,2 +1,0 @@
-# PLComp
-PLComp site
